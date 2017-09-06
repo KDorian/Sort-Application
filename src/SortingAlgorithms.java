@@ -3,6 +3,7 @@ import java.util.Random;
 public class SortingAlgorithms {
 
     int [] arr = new int [50];
+    int [] arr2 = new int [50];
 
     SortingAlgorithms(){
 
@@ -12,6 +13,7 @@ public class SortingAlgorithms {
 
             int n = rand.nextInt(101);
             arr[i] = n;
+            arr2[i]=n;
         }
     }
 
@@ -44,6 +46,38 @@ public class SortingAlgorithms {
 
             str = str + arr[i] + " ";
         }
+        str = str + "\n";
+
+        return str;
+    }
+
+    void BubbleSort(){
+
+        int n = arr2.length;
+
+        for(int i = 0; i < n -1; i++){
+
+            for(int j = 0; j < n - 1; j++){
+
+                if(arr2[j]> arr2[j+1]){
+
+                    int temp = arr2[j];
+                    arr2[j] = arr2[j+1];
+                    arr2[j+1] = temp;
+                }
+            }
+        }
+    }
+
+    String printBubbleSortArray(){
+
+        String str = null;
+        int n = arr2.length;
+
+        for(int i = 0; i < n; i++){
+            str = str + arr2[i] + " ";
+        }
+
         str = str + "\n";
 
         return str;
