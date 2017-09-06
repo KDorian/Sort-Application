@@ -9,6 +9,7 @@ public class Main {
 
         Fr.setVisible(true);
 
+        Fr.setSize(600,400);
         Fr.setResizable(false);
 
     }
