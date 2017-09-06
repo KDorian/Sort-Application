@@ -8,7 +8,7 @@ public class Main {
         Fr.setLocationRelativeTo(null);
 
         Fr.setVisible(true);
-        
+
         Fr.setResizable(false);
 
     }

@@ -4,6 +4,7 @@ public class SortingAlgorithms {
 
     int [] arr = new int [50];
     int [] arr2 = new int [50];
+    int [] arr3 = new int [50];
 
     SortingAlgorithms(){
 
@@ -13,7 +14,8 @@ public class SortingAlgorithms {
 
             int n = rand.nextInt(101);
             arr[i] = n;
-            arr2[i]=n;
+            arr2[i] = n;
+            arr3[i] = n;
         }
     }
 
@@ -80,6 +82,39 @@ public class SortingAlgorithms {
 
         str = str + "\n";
 
+        return str;
+    }
+
+    void InsertionSort(){
+
+        int n = arr3.length;
+
+        for(int i = 1; i < n; i++){
+
+            int key = arr3[i];
+            int j = i - 1;
+
+            while(j >= 0 && arr3[j] > key){
+
+                arr3[j + 1] = arr3[j];
+                j = j - 1;
+            }
+
+            arr3[j+1] = key;
+        }
+    }
+
+    String printInsertionSortArray(){
+
+        String str = null;
+        int n = arr3.length;
+
+        for(int i = 0; i < n; i++){
+
+            str = str + arr3[i] + " ";
+        }
+
+        str = str + "\n";
         return str;
     }
 

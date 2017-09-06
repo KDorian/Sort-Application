@@ -7,6 +7,7 @@ public class NewJFrame extends JFrame {
     private JButton selectionSortButton;
     private JTextArea textArea1;
     private JButton bubbleSortButton;
+    private JButton insertionSortButton;
 
     SortingAlgorithms algo = new SortingAlgorithms();
 
@@ -37,6 +38,19 @@ public class NewJFrame extends JFrame {
                 long elapsedTime = System.nanoTime() - start;
 
                 textArea1.setText("BUBBLE SORT\n Time: " + elapsedTime + " nanosec.");
+            }
+        });
+
+        insertionSortButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                long start = System.nanoTime();
+
+                algo.InsertionSort();
+                long elapsedTime = System.nanoTime() - start;
+
+                textArea1.setText("INSERTION SORT\n Time: " + elapsedTime + " nanosec.");
             }
         });
     }
